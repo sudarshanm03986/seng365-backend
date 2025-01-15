@@ -17,7 +17,7 @@ const getAll = async(
                             last_name as ownerLastName,
                             creation_date as creationDate,
                             min(cost) as supportingCost
-                        FROM petition P JOIN user U ON P.owner_id = U.id JOIN support_tier T ON P.id = T.petition_id join supporter S on P.id = S.petition_id `;
+                        FROM petition P JOIN user U ON P.owner_id = U.id JOIN support_tier T ON P.id = T.petition_id `;
 
         // ======== WHERE======================
         if (queryParams.q !== null || queryParams.supporterId !== null || queryParams.ownerId !== null || categoryId !== null ) {
